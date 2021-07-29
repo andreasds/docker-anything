@@ -24,4 +24,3 @@ make stop
 - `MYSQL_ROOT_PASSWORD`: Database root access password
 - `MYSQL_USER`: Database username
 - `MYSQL_DATA_HOST`: Host path to store MySQL data at host
-
