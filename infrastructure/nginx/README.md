@@ -20,7 +20,7 @@ make stop
 
 - `NGINX_VERSION`: Nginx Docker version
 - `NGINX_CONFIG_HOST`: Host path to store Nginx config at host
-- `NGINX_HOST_PORT`: Nginx host port
+- `NGINX_HOST_PORT`: Nginx published host port
 
 ## Reference
 
