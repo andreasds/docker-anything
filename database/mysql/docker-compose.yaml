@@ -10,6 +10,11 @@ services:
             MYSQL_USER: ${MYSQL_USER}
         image: mysql:${MYSQL_VERSION}
         platform: linux/x86_64 # used for M1 chip
+        ports:
+            - target: 3306
+              published: ${MYSQL_HOST_PORT}
+              protocol: tcp
+              mode: host
         restart: always
         volumes:
             - type: bind
