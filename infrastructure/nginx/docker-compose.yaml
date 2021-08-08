@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+    nginx_infra:
+        container_name: nginx_infra
+        image: nginx:${NGINX_VERSION}-alpine
+        ports:
+            - target: 80
+              published: ${NGINX_HOST_PORT}
+              protocol: tcp
+              mode: host
+            - target: 443
+              published: 443
+              protocol: tcp
+              mode: host
+        restart: always
+        volumes:
+            - type: bind
+              source: ${NGINX_CONFIG_HOST}
+              target: /etc/nginx/conf.d
+              read_only: true
